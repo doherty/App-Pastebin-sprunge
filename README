@@ -1,0 +1,57 @@
+NAME
+    App::sprunge - Application class for pasting to and reading from
+    sprunge.us
+
+VERSION
+    version 0.001
+
+SYNOPSIS
+        use App::sprunge;
+        my $app = App::sprunge->new();
+        $app->run();
+
+DESCRIPTION
+    App::sprunge provides an application interface to
+    WWW::Pastebin::Sprunge::Create and WWW::Pastebin::Sprunge::Retrieve,
+    which allow creating and retrieving pastes on the <http://sprunge.us>
+    pastebin.
+
+METHODS
+  new
+    new() is the constructor, and creates an application object. Takes no
+    parameters.
+
+  run
+    run() runs the application.
+
+    Takes two optional parameters:
+
+   Options
+    The first is an options hash reference.
+
+    *version*
+        If present, the application will print out version information and
+        exit.
+
+    *lang*, *syntax*
+        If present, the application will append this to the returned URI.
+        <http://sprunge.us> uses Pygments <http://pygments.org> for syntax
+        highlighting. In the future, there might be a check that the
+        supplied syntax highlighter is one supported by Pygments.
+
+   Arguments
+    This is an array reference. Only the first element is used. It is either
+    the URI to a paste to read, or the ID portion of the URI (the query
+    string). If this is present, the application will read and print out the
+    specified paste.
+
+AUTHOR
+    Mike Doherty <doherty@cs.dal.ca>
+
+COPYRIGHT AND LICENSE
+    This software is Copyright (c) 2010 by Mike Doherty.
+
+    This is free software, licensed under:
+
+      The GNU General Public License, Version 3, June 2007
+

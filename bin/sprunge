@@ -1,0 +1,76 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+package sprunge;
+# ABSTRACT: paste to (and read from) sprunge.us from the command line
+
+use App::sprunge;
+use Getopt::Long;
+use Pod::Usage;
+
+my %opts = ();
+GetOptions( \%opts,
+    'help|?',
+    'version',
+    'lang|syntax=s',
+);
+
+pod2usage(
+    -verbose => 2,
+) if $opts{'help'};
+
+=head1 SYNOPSIS
+
+B<sprunge> B<--lang> I<lang> < file
+
+ps aux | B<sprunge>
+
+B<sprunge> I<ID>
+
+B<sprunge> I<--help>
+
+Options:
+    --lang      Specifies the language for syntax highlighting
+    --help      Shows this man page
+    --version   Shows the version of this program and supporting libraries
+
+=head1 DESCRIPTION
+
+B<sprunge> is a simple command line program to write to (and read from)
+the pastebin L<http://sprunge.us>.
+
+=head2 Writing
+
+Provide input on stdin to B<sprunge> to paste it to the pastebin. Provide the
+B<--lang> option to specify syntax highlighting to apply.
+
+    ps aux | sprunge
+    sprunge --lang pl < file.pl
+
+=head2 Reading
+
+Run sprunge with a URL or paste ID to output the text to stdout.
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<--help>, -h, -?
+
+Opens this man page and exits.
+
+=item B<--version>
+
+Prints the version of this program and supporting libraries.
+
+=item B<--lang>, --syntax
+
+Specifies the syntax highlighting type to use. sprunge.us allows any syntax
+highlighting available from L<Pygments|http://pygments.org/> to be applied
+to any paste, so you can change this at any time by altering the URI parameter.
+
+=back
+
+=cut
+
+App::sprunge->new()->run(\%opts, \@ARGV);
