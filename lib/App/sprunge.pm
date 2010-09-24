@@ -40,27 +40,29 @@ Takes two optional parameters:
 
 =head3 Options
 
-The first is an options hash reference.
+The first is an options hash reference:
 
 =over 4
 
-=item I<version>
+=item *
 
-If present, the application will print out version information and exit.
+If I<version> is present, the application will print out version information and exit.
 
-=item I<lang>, I<syntax>
+=item *
 
-If present, the application will append this to the returned URI. L<http://sprunge.us>
-uses L<Pygments|http://pygments.org> for syntax highlighting. In the future, there
-might be a check that the supplied syntax highlighter is one supported by Pygments.
+If I<lang> is present, the application will append this to the returned URI.
+L<http://sprunge.us> uses L<Pygments|http://pygments.org> for syntax highlighting.
+In the future, there might be a check that the supplied syntax highlighter is one
+supported by Pygments.
 
 =back
 
 =head3 Arguments
 
-This is an array reference. Only the first element is used. It is either the
-URI to a paste to read, or the ID portion of the URI (the query string). If this
-is present, the application will read and print out the specified paste.
+The second parameter is an array reference. Only the first element is used. It
+is either the URI to a paste to read, or the ID portion of the URI (the query
+string). If this is present, the application will read and print out the specified
+paste.
 
 =cut
 

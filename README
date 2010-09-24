@@ -27,23 +27,38 @@ METHODS
     Takes two optional parameters:
 
    Options
-    The first is an options hash reference.
+    The first is an options hash reference:
 
-    *version*
-        If present, the application will print out version information and
-        exit.
+    *   If *version* is present, the application will print out version
+        information and exit.
 
-    *lang*, *syntax*
-        If present, the application will append this to the returned URI.
-        <http://sprunge.us> uses Pygments <http://pygments.org> for syntax
-        highlighting. In the future, there might be a check that the
-        supplied syntax highlighter is one supported by Pygments.
+    *   If *lang* is present, the application will append this to the
+        returned URI. <http://sprunge.us> uses Pygments
+        <http://pygments.org> for syntax highlighting. In the future, there
+        might be a check that the supplied syntax highlighter is one
+        supported by Pygments.
 
    Arguments
-    This is an array reference. Only the first element is used. It is either
-    the URI to a paste to read, or the ID portion of the URI (the query
-    string). If this is present, the application will read and print out the
-    specified paste.
+    The second parameter is an array reference. Only the first element is
+    used. It is either the URI to a paste to read, or the ID portion of the
+    URI (the query string). If this is present, the application will read
+    and print out the specified paste.
+
+AVAILABILITY
+    The latest version of this module is available from the Comprehensive
+    Perl Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a
+    CPAN site near you, or see <http://search.cpan.org/dist/App-sprunge/>.
+
+    The development version lives at <http://github.com/doherty/App-sprunge>
+    and may be cloned from <git://github.com/doherty/App-sprunge>. Instead
+    of sending patches, please fork this project using the standard git and
+    github infrastructure.
+
+BUGS AND LIMITATIONS
+    No bugs have been reported.
+
+    Please report any bugs or feature requests through the web interface at
+    <http://github.com/doherty/App-sprunge/issues>.
 
 AUTHOR
     Mike Doherty <doherty@cs.dal.ca>
