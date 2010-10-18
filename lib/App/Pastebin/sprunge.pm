@@ -1,19 +1,22 @@
 use strict;
 use warnings;
-package App::sprunge;
+package App::Pastebin::sprunge;
 # ABSTRACT: Application class for pasting to and reading from sprunge.us
 
 =head1 SYNOPSIS
 
-    use App::sprunge;
-    my $app = App::sprunge->new();
+    use App::Pastebin::sprunge;
+    my $app = App::Pastebin::sprunge->new();
     $app->run();
 
 =head1 DESCRIPTION
 
-B<App::sprunge> provides an application interface to L<WWW::Pastebin::Sprunge::Create>
+B<App::Pastebin::sprunge> provides an application interface to L<WWW::Pastebin::Sprunge::Create>
 and L<WWW::Pastebin::Sprunge::Retrieve>, which allow creating and retrieving
 pastes on the L<http://sprunge.us> pastebin.
+
+This distribution provides an executable L<sprunge>, which provides a simple command-line
+client for L<http://sprunge.us> using this library.
 
 =head1 METHODS
 
@@ -74,7 +77,7 @@ sub run {
     if ($opts->{'version'}) {
         require File::Basename;
         my $this = File::Basename::basename($0);
-        my $this_ver = App::sprunge->VERSION();
+        my $this_ver = App::Pastebin::sprunge->VERSION();
         print "$this version $this_ver\n" and exit;
     }
 

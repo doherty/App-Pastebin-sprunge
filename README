@@ -1,17 +1,17 @@
 NAME
-    App::sprunge - Application class for pasting to and reading from
-    sprunge.us
+    App::Pastebin::sprunge - Application class for pasting to and reading
+    from sprunge.us
 
 VERSION
     version 0.001
 
 SYNOPSIS
-        use App::sprunge;
-        my $app = App::sprunge->new();
+        use App::Pastebin::sprunge;
+        my $app = App::Pastebin::sprunge->new();
         $app->run();
 
 DESCRIPTION
-    App::sprunge provides an application interface to
+    App::Pastebin::sprunge provides an application interface to
     WWW::Pastebin::Sprunge::Create and WWW::Pastebin::Sprunge::Retrieve,
     which allow creating and retrieving pastes on the <http://sprunge.us>
     pastebin.
@@ -47,18 +47,20 @@ METHODS
 AVAILABILITY
     The latest version of this module is available from the Comprehensive
     Perl Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a
-    CPAN site near you, or see <http://search.cpan.org/dist/App-sprunge/>.
+    CPAN site near you, or see
+    <http://search.cpan.org/dist/App-Pastebin-sprunge/>.
 
-    The development version lives at <http://github.com/doherty/App-sprunge>
-    and may be cloned from <git://github.com/doherty/App-sprunge>. Instead
-    of sending patches, please fork this project using the standard git and
-    github infrastructure.
+    The development version lives at
+    <http://github.com/doherty/App-Pastebin-sprunge> and may be cloned from
+    <git://github.com/doherty/App-Pastebin-sprunge>. Instead of sending
+    patches, please fork this project using the standard git and github
+    infrastructure.
 
 BUGS AND LIMITATIONS
     No bugs have been reported.
 
     Please report any bugs or feature requests through the web interface at
-    <http://github.com/doherty/App-sprunge/issues>.
+    <http://github.com/doherty/App-Pastebin-sprunge/issues>.
 
 AUTHOR
     Mike Doherty <doherty@cs.dal.ca>

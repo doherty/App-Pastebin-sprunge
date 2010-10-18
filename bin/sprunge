@@ -4,7 +4,7 @@ use warnings;
 package sprunge;
 # ABSTRACT: paste to (and read from) sprunge.us from the command line
 
-use App::sprunge;
+use App::Pastebin::sprunge;
 use Getopt::Long;
 use Pod::Usage;
 
@@ -73,4 +73,4 @@ to any paste, so you can change this at any time by altering the URI parameter.
 
 =cut
 
-App::sprunge->new()->run(\%opts, \@ARGV);
+App::Pastebin::sprunge->new()->run(\%opts, \@ARGV);

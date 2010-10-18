@@ -3,5 +3,5 @@ use warnings;
 use Test::More tests => 1;
 
 BEGIN {
-    use_ok('App::sprunge');
+    use_ok('App::Pastebin::sprunge');
 }
