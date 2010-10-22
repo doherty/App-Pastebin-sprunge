@@ -1,6 +1,8 @@
 Changelog for App::Pastebin::sprunge
 
 {{$NEXT}}
+ * Tweaked documentation
+ * Require minimum version of Test::More to resolve test failures
 
 0.001     2010-10-18
  * Initial version

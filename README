@@ -3,7 +3,7 @@ NAME
     from sprunge.us
 
 VERSION
-    version 0.001
+    version 0.002
 
 SYNOPSIS
         use App::Pastebin::sprunge;
