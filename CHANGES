@@ -1,6 +1,7 @@
 Changelog for App::Pastebin::sprunge
 
 {{$NEXT}}
+ * Fixed documentation formatting
 
 0.002     2010-10-21
  * Tweaked documentation

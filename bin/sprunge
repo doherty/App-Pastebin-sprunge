@@ -21,18 +21,10 @@ pod2usage(
 
 =head1 SYNOPSIS
 
-B<sprunge> B<--lang> I<lang> < file
-
-ps aux | B<sprunge>
-
-B<sprunge> I<ID>
-
-B<sprunge> I<--help>
-
-Options:
-    --lang      Specifies the language for syntax highlighting
-    --help      Shows this man page
-    --version   Shows the version of this program and supporting libraries
+    sprunge --lang lang < file
+    ps aux | sprunge
+    sprunge ID
+    sprunge --help
 
 =head1 DESCRIPTION
 
