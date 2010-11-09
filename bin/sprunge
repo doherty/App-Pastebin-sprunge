@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 package sprunge;
-# ABSTRACT: paste to (and read from) sprunge.us from the command line
+# ABSTRACT: command-line read-write access to sprunge.us
 
 use App::Pastebin::sprunge;
 use Getopt::Long;
