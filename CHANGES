@@ -1,6 +1,7 @@
 Changelog for App::Pastebin::sprunge
 
 {{$NEXT}}
+ * Use Perl_5 license: dual-licensed under GPL and Artistic
 
 0.003     2010-10-31
  * Fixed documentation formatting
