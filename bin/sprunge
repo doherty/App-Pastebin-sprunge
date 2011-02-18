@@ -1,8 +1,9 @@
 #!/usr/bin/perl
-use strict;
-use warnings;
 package sprunge;
 # ABSTRACT: command-line read-write access to sprunge.us
+# VERSION
+use strict;
+use warnings;
 
 use App::Pastebin::sprunge;
 use Getopt::Long;

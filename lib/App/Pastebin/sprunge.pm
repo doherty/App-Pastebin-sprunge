@@ -1,7 +1,8 @@
-use strict;
-use warnings;
 package App::Pastebin::sprunge;
 # ABSTRACT: application class for pasting to and reading from sprunge.us
+# VERSION
+use strict;
+use warnings;
 
 =head1 SYNOPSIS
 
