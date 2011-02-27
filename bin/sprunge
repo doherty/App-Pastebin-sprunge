@@ -2,8 +2,7 @@
 package sprunge;
 # ABSTRACT: command-line read-write access to sprunge.us
 # VERSION
-use strict;
-use warnings;
+use perl5i::2;
 
 use App::Pastebin::sprunge;
 use Getopt::Long;
@@ -68,4 +67,10 @@ to any paste, so you can change this at any time by altering the URI parameter.
 
 =cut
 
-App::Pastebin::sprunge->new()->run(\%opts, \@ARGV);
+if (delete $opts{version}) {
+    my $this = __PACKAGE__;
+    my $this_ver = __PACKAGE__->VERSION();
+    say "$this version $this_ver" and exit;
+}
+
+App::Pastebin::sprunge->new()->run($opts{lang});

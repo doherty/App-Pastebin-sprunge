@@ -1,8 +1,7 @@
 package App::Pastebin::sprunge;
 # ABSTRACT: application class for pasting to and reading from sprunge.us
 # VERSION
-use strict;
-use warnings;
+use perl5i::2;
 
 =head1 SYNOPSIS
 
@@ -27,13 +26,8 @@ B<new()> is the constructor, and creates an application object. Takes no paramet
 
 =cut
 
-sub new {
-    my $class = shift;
-    my $name  = shift;
-
-    my $self = { name => $name };
-    bless($self, $class);
-    return $self;
+method new ($class:) {
+    return bless {}, $class;
 }
 
 =head2 run
@@ -70,27 +64,15 @@ paste.
 
 =cut
 
-sub run {
-    my $self = shift;
-    my $opts = shift;
-    my $args = shift;
-
-    if ($opts->{'version'}) {
-        require File::Basename;
-        my $this = File::Basename::basename($0);
-        my $this_ver = App::Pastebin::sprunge->VERSION();
-        print "$this version $this_ver\n" and exit;
-    }
-
-    if (! scalar @$args) {  # WRITE
+method run($lang) {
+    if (!@ARGV) {           # WRITE
         require WWW::Pastebin::Sprunge::Create;
-        require File::Slurp;
         my $writer = WWW::Pastebin::Sprunge::Create->new();
-        my $text = File::Slurp::slurp(\*STDIN);
-        $writer->paste($text, lang => $opts->{'lang'})
+        my $text = do { local $/; <STDIN> };
+        $writer->paste($text, lang => $lang)
             or warn "Paste failed: " . $writer->error() . "\n"
             and exit 1;
-        print "$writer\n";
+        say $writer;
     }
     else {                  # READ
         my $paste_id = shift @ARGV;
@@ -102,7 +84,3 @@ sub run {
         print "$reader\n";
     }
 }
-
-1;
-
-__END__
