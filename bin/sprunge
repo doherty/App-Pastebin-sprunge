@@ -1,8 +1,8 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 package sprunge;
+use perl5i::2;
 # ABSTRACT: command-line read-write access to sprunge.us
 # VERSION
-use perl5i::2;
 
 use App::Pastebin::sprunge;
 use Getopt::Long;
@@ -17,7 +17,7 @@ GetOptions( \%opts,
 
 pod2usage(
     -verbose => 2,
-) if $opts{'help'};
+) if $opts{help};
 
 =head1 SYNOPSIS
 

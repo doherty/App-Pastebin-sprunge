@@ -1,6 +1,9 @@
-Changelog for App::Pastebin::sprunge
+Changelog for {{$dist->name}}
 
 {{$NEXT}}
+ * Packaging updates
+ * Internal refactoring
+ * Expanded test suite
 
 0.004     2010-11-28
  * Use Perl_5 license: dual-licensed under GPL and Artistic
