@@ -1,6 +1,8 @@
 Changelog for {{$dist->name}}
 
 {{$NEXT}}
+
+0.005     2011-04-21
  * Packaging updates
  * Internal refactoring
  * Expanded test suite

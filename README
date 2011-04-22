@@ -1,6 +1,6 @@
 NAME
-    App::Pastebin::sprunge - application class for pasting to and reading
-    from sprunge.us
+    App::Pastebin::sprunge - application for pasting to and reading from
+    sprunge.us
 
 VERSION
     version 0.005
@@ -27,25 +27,9 @@ METHODS
   run
     run() runs the application.
 
-    Takes two optional parameters:
-
-   Options
-    The first is an options hash reference:
-
-    *   If *version* is present, the application will print out version
-        information and exit.
-
-    *   If *lang* is present, the application will append this to the
-        returned URI. <http://sprunge.us> uses Pygments
-        <http://pygments.org> for syntax highlighting. In the future, there
-        might be a check that the supplied syntax highlighter is one
-        supported by Pygments.
-
-   Arguments
-    The second parameter is an array reference. Only the first element is
-    used. It is either the URI to a paste to read, or the ID portion of the
-    URI (the query string). If this is present, the application will read
-    and print out the specified paste.
+    If *lang* is present, the application will append this to the returned
+    URI. <http://sprunge.us> uses Pygments <http://pygments.org> for syntax
+    highlighting.
 
 AVAILABILITY
     The latest version of this module is available from the Comprehensive
@@ -59,11 +43,16 @@ AVAILABILITY
     patches, please fork this project using the standard git and github
     infrastructure.
 
+SOURCE
+    The development version is on github at
+    <http://github.com/doherty/App-Pastebin-sprunge> and may be cloned from
+    <git://github.com/doherty/App-Pastebin-sprunge.git>
+
 BUGS AND LIMITATIONS
     No bugs have been reported.
 
     Please report any bugs or feature requests through the web interface at
-    <http://github.com/doherty/App-Pastebin-sprunge/issues>.
+    <https://github.com/doherty/App-Pastebin-sprunge/issues>.
 
 AUTHOR
     Mike Doherty <doherty@cpan.org>
