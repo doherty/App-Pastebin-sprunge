@@ -3,7 +3,7 @@ NAME
     sprunge.us
 
 VERSION
-    version 0.005
+    version 0.006
 
 SYNOPSIS
         use App::Pastebin::sprunge;
@@ -32,6 +32,8 @@ METHODS
     highlighting.
 
 AVAILABILITY
+    The project homepage is <http://p3rl.org/App::Pastebin::sprunge>.
+
     The latest version of this module is available from the Comprehensive
     Perl Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a
     CPAN site near you, or see
