@@ -7,7 +7,7 @@ use App::Pastebin::sprunge;
 BEGIN {
     @ARGV = qw(SCLg);
 }
-my $CONTENT = "ohaithar\n\n";
+my $CONTENT = "ohaithar\n\n\n";
 
 stdout_is(
     sub { App::Pastebin::sprunge->new()->run() },

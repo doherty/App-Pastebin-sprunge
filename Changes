@@ -1,6 +1,7 @@
 Changelog for {{$dist->name}}
 
 {{$NEXT}}
+ * Fix incorrect test string so tests pass
 
 0.005     2011-04-21
  * Packaging updates
