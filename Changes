@@ -1,6 +1,8 @@
 Changelog for {{$dist->name}}
 
 {{$NEXT}}
+
+0.007     2011-04-29
  * Looser test validation to catch more erroneously-failing smokers
 
 0.006     2011-04-26
