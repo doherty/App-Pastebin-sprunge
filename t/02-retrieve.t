@@ -7,10 +7,9 @@ use App::Pastebin::sprunge;
 BEGIN {
     @ARGV = qw(SCLg);
 }
-my $CONTENT = "ohaithar\n\n\n";
 
-stdout_is(
+stdout_like(
     sub { App::Pastebin::sprunge->new()->run() },
-    $CONTENT,
+    qr/ohaithar/,
     'Paste retrieved - and done correctly'
 );

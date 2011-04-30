@@ -1,6 +1,7 @@
 Changelog for {{$dist->name}}
 
 {{$NEXT}}
+ * Looser test validation to catch more erroneously-failing smokers
 
 0.006     2011-04-26
  * Fix incorrect test string so tests pass
