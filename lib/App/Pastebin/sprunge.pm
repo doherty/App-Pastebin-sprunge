@@ -1,5 +1,8 @@
 package App::Pastebin::sprunge;
-use perl5i::2;
+use strict;
+use warnings;
+use v5.10.1;
+
 # ABSTRACT: application for pasting to and reading from sprunge.us
 # VERSION
 
@@ -15,7 +18,7 @@ B<App::Pastebin::sprunge> provides an application interface to
 L<WWW::Pastebin::Sprunge::Create> and L<WWW::Pastebin::Sprunge::Retrieve>,
 which allow creating and retrieving pastes on the L<http://sprunge.us> pastebin.
 
-This distribution provides an executable L<sprunge>, which provides a simple
+This distribution provides an executable C<sprunge>, which provides a simple
 command-line client for L<http://sprunge.us> using this library.
 
 =head1 METHODS
@@ -27,7 +30,9 @@ parameters.
 
 =cut
 
-method new ($class:) {
+sub new {
+    my $class = shift;
+
     my $self;
     if (@ARGV) {                # READ
         $self->{paste_id} = shift @ARGV;
@@ -51,7 +56,10 @@ highlighting.
 
 =cut
 
-method run($lang) {
+sub run {
+    my $self = shift;
+    my $lang = shift;
+
     if ($self->{paste_id}) {    # READ
         $self->{reader}->retrieve($self->{paste_id})
             or warn "Reading paste $self->{paste_id} failed: "
@@ -69,3 +77,5 @@ method run($lang) {
     }
     return;
 }
+
+1;

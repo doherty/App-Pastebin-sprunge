@@ -1,12 +1,14 @@
 #!/usr/bin/env perl
 package sprunge;
-use perl5i::2;
-# ABSTRACT: command-line read-write access to sprunge.us
-# VERSION
-
+use strict;
+use warnings;
+use v5.10.1;
 use App::Pastebin::sprunge;
 use Getopt::Long;
 use Pod::Usage;
+
+# ABSTRACT: command-line read-write access to sprunge.us
+# VERSION
 
 my %opts = ();
 GetOptions( \%opts,

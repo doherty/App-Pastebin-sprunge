@@ -1,6 +1,7 @@
 Changelog for {{$dist->name}}
 
 {{$NEXT}}
+ * Don't use perl5i - too slow
 
 0.007     2011-04-29
  * Looser test validation to catch more erroneously-failing smokers
