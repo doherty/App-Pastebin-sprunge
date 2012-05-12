@@ -2,40 +2,43 @@
 use strict;
 use warnings;
 
-BEGIN { require 5.006; }
+use 5.010001;
 
 use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'application for pasting to and reading from sprunge.us',
-  'AUTHOR' => 'Mike Doherty <doherty@cpan.org>',
-  'BUILD_REQUIRES' => {
-    'File::Find' => '0',
-    'File::Temp' => '0',
-    'Test::More' => '0.82',
-    'Test::Output' => '0'
+  "ABSTRACT" => "application for pasting to and reading from sprunge.us",
+  "AUTHOR" => "Mike Doherty <doherty\@cpan.org>",
+  "BUILD_REQUIRES" => {
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Module::Build" => "0.3601",
+    "Test::More" => "0.82",
+    "Test::Output" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30",
+    "Module::Build" => "0.3601"
   },
-  'DISTNAME' => 'App-Pastebin-sprunge',
-  'EXE_FILES' => [
-    'bin/sprunge'
+  "DISTNAME" => "App-Pastebin-sprunge",
+  "EXE_FILES" => [
+    "bin/sprunge"
   ],
-  'LICENSE' => 'perl',
-  'NAME' => 'App::Pastebin::sprunge',
-  'PREREQ_PM' => {
-    'Getopt::Long' => '0',
-    'Pod::Usage' => '0',
-    'WWW::Pastebin::Sprunge::Create' => '0',
-    'WWW::Pastebin::Sprunge::Retrieve' => '0',
-    'perl5i::2' => '0'
+  "LICENSE" => "perl",
+  "NAME" => "App::Pastebin::sprunge",
+  "PREREQ_PM" => {
+    "Getopt::Long" => 0,
+    "Pod::Usage" => 0,
+    "WWW::Pastebin::Sprunge::Create" => 0,
+    "WWW::Pastebin::Sprunge::Retrieve" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'VERSION' => '0.007',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.008",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 
