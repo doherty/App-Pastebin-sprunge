@@ -1,6 +1,8 @@
 Changelog for {{$dist->name}}
 
 {{$NEXT}}
+
+0.008     2012-05-12
  * Don't use perl5i - too slow
 
 0.007     2011-04-29
