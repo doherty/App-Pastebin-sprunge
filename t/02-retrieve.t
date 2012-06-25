@@ -5,7 +5,7 @@ use Test::Output;
 use App::Pastebin::sprunge;
 
 BEGIN {
-    @ARGV = qw(SCLg);
+    @ARGV = qw(cQVR);
 }
 
 stdout_like(
