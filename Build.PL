@@ -14,7 +14,6 @@ my %module_build_args = (
     "Test::Output" => 0
   },
   "configure_requires" => {
-    "ExtUtils::MakeMaker" => "6.30",
     "Module::Build" => "0.3601"
   },
   "dist_abstract" => "application for pasting to and reading from sprunge.us",
@@ -22,7 +21,7 @@ my %module_build_args = (
     "Mike Doherty <doherty\@cpan.org>"
   ],
   "dist_name" => "App-Pastebin-sprunge",
-  "dist_version" => "0.008",
+  "dist_version" => "0.009",
   "license" => "perl",
   "module_name" => "App::Pastebin::sprunge",
   "recommends" => {},

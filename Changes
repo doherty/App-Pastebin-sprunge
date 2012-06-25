@@ -1,6 +1,8 @@
 Changelog for {{$dist->name}}
 
 {{$NEXT}}
+
+0.009     2012-06-25
  * Update test suite [GH #3]
 
 0.008     2012-05-12

@@ -19,7 +19,6 @@ my %WriteMakefileArgs = (
     "Test::Output" => 0
   },
   "CONFIGURE_REQUIRES" => {
-    "ExtUtils::MakeMaker" => "6.30",
     "Module::Build" => "0.3601"
   },
   "DISTNAME" => "App-Pastebin-sprunge",
@@ -36,7 +35,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.008",
+  "VERSION" => "0.009",
   "test" => {
     "TESTS" => "t/*.t"
   }
