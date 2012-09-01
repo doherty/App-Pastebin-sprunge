@@ -4,7 +4,7 @@ App::Pastebin::sprunge - application for pasting to and reading from sprunge.us
 
 # VERSION
 
-version 0.009
+version 0.010
 
 # SYNOPSIS
 
@@ -38,7 +38,7 @@ highlighting.
 
 # AVAILABILITY
 
-The project homepage is [http://p3rl.org/App::Pastebin::sprunge](http://p3rl.org/App::Pastebin::sprunge).
+The project homepage is [http://metacpan.org/release/App-Pastebin-sprunge/](http://metacpan.org/release/App-Pastebin-sprunge/).
 
 The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit [http://www.perl.com/CPAN/](http://www.perl.com/CPAN/) to find a CPAN

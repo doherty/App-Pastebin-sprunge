@@ -1,6 +1,8 @@
 Changelog for {{$dist->name}}
 
 {{$NEXT}}
+
+0.010     2012-09-01
  * Test for network connectivity in the test suite
 
 0.009     2012-06-25

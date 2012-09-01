@@ -9,6 +9,7 @@ my %module_build_args = (
   "build_requires" => {
     "File::Find" => 0,
     "File::Temp" => 0,
+    "IO::Socket::INET" => 0,
     "Module::Build" => "0.3601",
     "Test::More" => "0.82",
     "Test::Output" => 0
@@ -21,7 +22,7 @@ my %module_build_args = (
     "Mike Doherty <doherty\@cpan.org>"
   ],
   "dist_name" => "App-Pastebin-sprunge",
-  "dist_version" => "0.009",
+  "dist_version" => "0.010",
   "license" => "perl",
   "module_name" => "App::Pastebin::sprunge",
   "recommends" => {},
