@@ -1,6 +1,7 @@
 use strict;
 use Test::More 0.82 tests => 1;
 use Test::Output;
+use IO::Socket::INET;
 use App::Pastebin::sprunge;
 
 BEGIN {
@@ -10,11 +11,22 @@ BEGIN {
 }
 use warnings;
 
-stdout_like(
-    sub { App::Pastebin::sprunge->new()->run() },
-    qr{http://sprunge.us/[a-zA-Z]+},
-    'Paste created - and done correctly'
+my $sock = IO::Socket::INET->new(
+    PeerHost => 'sprunge.us',
+    PeerPort => 80,
+    Timeout  => 5,
+    Type     => SOCK_STREAM,
 );
+SKIP: {
+    skip("Couldn't connect to sprunge.us: $!", 1)
+        unless defined $sock;
+
+    stdout_like(
+        sub { App::Pastebin::sprunge->new()->run() },
+        qr{http://sprunge.us/[a-zA-Z]+},
+        'Paste created - and done correctly'
+    );
+}
 
 __DATA__
 text

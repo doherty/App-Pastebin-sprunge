@@ -1,6 +1,7 @@
 Changelog for {{$dist->name}}
 
 {{$NEXT}}
+ * Test for network connectivity in the test suite
 
 0.009     2012-06-25
  * Update test suite [GH #3]
