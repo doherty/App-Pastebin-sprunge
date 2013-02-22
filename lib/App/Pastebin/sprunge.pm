@@ -62,17 +62,13 @@ sub run {
 
     if ($self->{paste_id}) {    # READ
         $self->{reader}->retrieve($self->{paste_id})
-            or warn "Reading paste $self->{paste_id} failed: "
-            . $self->{reader}->error() . "\n"
-            and exit 1;
+            or die "Reading paste $self->{paste_id} failed: ", $self->{reader}->error();
         say $self->{reader};
     }
     else {                      # WRITE
         my $text = do { local $/; <STDIN> };
         $self->{writer}->paste($text, lang => $lang)
-            or warn 'Paste failed: '
-            . $self->{writer}->error() . "\n"
-            and exit 1;
+            or die 'Paste failed: ', $self->{writer}->error();
         say $self->{writer};
     }
     return;

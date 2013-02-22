@@ -1,6 +1,7 @@
 Changelog for {{$dist->name}}
 
 {{$NEXT}}
+ * Die instead of exit on failure to create/fetch a paste
 
 0.010     2012-09-01
  * Test for network connectivity in the test suite
