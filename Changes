@@ -1,6 +1,8 @@
 Changelog for {{$dist->name}}
 
 {{$NEXT}}
+
+0.011     2013-02-21
  * Die instead of exit on failure to create/fetch a paste
 
 0.010     2012-09-01
