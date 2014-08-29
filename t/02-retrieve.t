@@ -1,5 +1,7 @@
 use strict;
 use warnings;
+
+use Test::Is qw(extended);
 use Test::More 0.82 tests => 1;
 use Test::Output qw(output_from);
 use IO::Socket::INET;
