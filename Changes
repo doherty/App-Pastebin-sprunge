@@ -1,6 +1,8 @@
 Changelog for App-Pastebin-sprunge
 
 {{$NEXT}}
+
+0.012     2014-08-29
   - Require sprunge libraries that detect errors properly
 
 0.011     2013-02-21
